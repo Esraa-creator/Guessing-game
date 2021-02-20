@@ -1,5 +1,5 @@
 html {
-    background-color: rgb(196, 197, 190);
+    background-color: rgb(247, 251, 219);
 }
 body {
     margin: auto;
@@ -60,7 +60,7 @@ li:nth-child(even) {
 
   
 footer {
-    position: fixed;
+   
     left: 0;
     bottom: 0;
     width: 100%;
