@@ -6,10 +6,10 @@ alert('welcome to my web page ' + userName);
 let guessing = prompt('Do you think I love spicy food ?');
 guessing = guessing.toLowerCase();
 
-if (guessing.toLowerCase() === 'yes') {
+if (guessing.toLowerCase() === 'yes' ||guessing.toLowerCase() === 'y') {
   console.log('True');
   alert('True');
-} else if (guessing.toLowerCase() === 'no') {
+} else if (guessing.toLowerCase() === 'no' || guessing.toLowerCase() === 'n') {
   alert('Why no ?');
  
 } else {
@@ -19,19 +19,19 @@ if (guessing.toLowerCase() === 'yes') {
 
 let guessing1 = prompt('Do you think I love winter?');
 guessing1 = guessing1.toLowerCase();
-if (guessing1.toLowerCase() === 'yes') {
+if (guessing1.toLowerCase() === 'yes' || guessing1.toLowerCase() === 'y') {
   alert('True');
-} else if (guessing1.toLowerCase() === 'no') {
+} else if (guessing1.toLowerCase() === guessing1.toLowerCase() === 'n') {
   alert('Why no ?');
 } else {
   alert('please enter yes or no');
 }
 
-let guessing2 = prompt('Do you think I love being healthy?');
+let guessing2 = prompt('Do you think I love having a healthy lifestyle?');
 guessing2 = guessing2.toLowerCase();
-if (guessing2.toLowerCase() === 'yes') {
+if (guessing2.toLowerCase() === 'yes' || guessing2.toLowerCase() === 'y') {
   alert('True');
-} else if (guessing2.toLowerCase() === 'no') {
+} else if (guessing2.toLowerCase() === 'no' || guessing2.toLowerCase() === 'n') {
   alert('Why no ?');
 } else {
   alert('please enter yes or no');
@@ -39,9 +39,9 @@ if (guessing2.toLowerCase() === 'yes') {
 
 let guessing3 = prompt('Do you think I love reading?');
 guessing3 = guessing3.toLowerCase();
-if (guessing3.toLowerCase() === 'yes') {
+if (guessing3.toLowerCase() === 'yes' || guessing3.toLowerCase() === 'y') {
   alert('True');
-} else if (guessing3.toLowerCase() === 'no') {
+} else if (guessing3.toLowerCase() === 'no' || guessing3.toLowerCase() === 'n') {
   alert('Why no ?');
 } else {
   alert('please enter yes or no');
@@ -50,9 +50,9 @@ if (guessing3.toLowerCase() === 'yes') {
 
 let guessing5 = prompt('Do you think I am lovely person?');
 guessing5 = guessing5.toLowerCase();
-if (guessing5.toLowerCase() === 'yes') {
+if (guessing5.toLowerCase() === 'yes' || guessing5.toLowerCase() === 'y') {
   alert('True');
-} else if (guessing5.toLowerCase() === 'no') {
+} else if (guessing5.toLowerCase() === 'no' || guessing5.toLowerCase() === 'n') {
   alert('Why no ?');
 } else {
   alert('please enter yes or no');
@@ -173,17 +173,22 @@ for (let i = 0; i < 3; i++) {
 
 
 let arr = ['PARIS', 'ROME', 'Amsterdam', 'Barcelona', 'Beirut', 'Istanbul', 'Florence'].toLowerCase();
-let guess = prompt('what do you think the  most beautiful citie in the world I would love to visit?PARIS,ROME ,Amsterdam,Barcelon,Beirut,Istanbul,Florence');
+let guess = prompt('can you guess what is the city I would love to vist? PARIS, ROME, Amsterdam, Barcelon, Beirut, Istanbul or Florence');
 
 
 for (let i = 0; i < 6; i++) {
   if (guess === arr[3]) {
-    alert(' yes , you are right');
-   
-    
+    alert('Yes, you are right!');
   }
   else {
-    guess = prompt('no , that is not right')
+    let msg = 'No, that is not right'
+      if(i < 5){
+        msg = msg + ', Try again'
+        prompt(msg);
+      }else{
+          guess = prompt(msg);
+      }
+    
   }
 
 }
